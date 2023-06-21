@@ -80,13 +80,13 @@ describe("Exchange", () => {
       });
 
       let tokensOut = await exchange.getTokenAmount(ethers.parseEther("1"));
-      expect(tokensOut).to.equal(ethers.parseEther("1.998001998001998001"));
+      expect(tokensOut).to.equal(ethers.parseEther("1.978041738678708079"));
 
       tokensOut = await exchange.getTokenAmount(ethers.parseEther("100"));
-      expect(tokensOut).to.equal(ethers.parseEther("181.818181818181818181"));
+      expect(tokensOut).to.equal(ethers.parseEther("180.163785259326660600"));
 
       tokensOut = await exchange.getTokenAmount(ethers.parseEther("1000"));
-      expect(tokensOut).to.equal(ethers.parseEther("1000"));
+      expect(tokensOut).to.equal(ethers.parseEther("994.974874371859296482"));
     });
   });
 
@@ -103,13 +103,13 @@ describe("Exchange", () => {
       });
 
       let ethOut = await exchange.getEthAmount(ethers.parseEther("2"));
-      expect(ethOut).to.equal(ethers.parseEther("0.999000999000999"));
+      expect(ethOut).to.equal(ethers.parseEther("0.989020869339354039"));
 
       ethOut = await exchange.getEthAmount(ethers.parseEther("100"));
-      expect(ethOut).to.equal(ethers.parseEther("47.619047619047619047"));
+      expect(ethOut).to.equal(ethers.parseEther("47.165316817532158170"));
 
       ethOut = await exchange.getEthAmount(ethers.parseEther("2000"));
-      expect(ethOut).to.equal(ethers.parseEther("500"));
+      expect(ethOut).to.equal(ethers.parseEther("497.487437185929648241"));
     });
   });
 });
